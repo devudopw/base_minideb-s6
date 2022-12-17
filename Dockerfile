@@ -1,8 +1,8 @@
 ARG MINIDEB_RELEASE=buster
 
-FROM mirror.gcr.io/bitnami/minideb:$MINIDEB_RELEASE AS build
+FROM r.sync.pw/dockerhub/bitnami/minideb:$MINIDEB_RELEASE AS build
 
-ARG S6_VERSION=v2.1.0.2
+ARG S6_VERSION=v2.2.0.3
 ARG S6_ARCH=amd64
 
 ENV S6_OVERLAY_URL=https://github.com/just-containers/s6-overlay/releases/download/${S6_VERSION}/s6-overlay-${S6_ARCH}.tar.gz
